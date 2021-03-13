@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import cc.anisimov.vlad.rozetkapiclist.R
+import cc.anisimov.vlad.rozetkapiclist.domain.utility.SingleLiveEvent
 
 open class BaseFragment : Fragment() {
 
@@ -27,5 +28,13 @@ open class BaseFragment : Fragment() {
                 "OK"
             ) { dialog, _ -> dialog.dismiss() }
             .show()
+    }
+
+    protected fun setupErrorHandling(oError: SingleLiveEvent<String?>) {
+        oError.observe(viewLifecycleOwner) { errorText ->
+            if (errorText != null) {
+                showSimpleDialog(errorText)
+            }
+        }
     }
 }

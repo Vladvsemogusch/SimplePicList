@@ -27,5 +27,8 @@ class ImageListFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setupToolbar(toolbar, getString(R.string.gallery))
         viewModel.start()
+        setupErrorHandling(viewModel.oError)
     }
+
+
 }
