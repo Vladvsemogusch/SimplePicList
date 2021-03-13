@@ -1,5 +1,5 @@
 package cc.anisimov.vlad.rozetkapiclist.domain.model
 
-data class ImageUI(
+data class Image(
     val id: Int,
 )

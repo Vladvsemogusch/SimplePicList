@@ -9,6 +9,7 @@ import cc.anisimov.vlad.rozetkapiclist.R
 import cc.anisimov.vlad.rozetkapiclist.domain.viewmodel.ImageListViewModel
 import cc.anisimov.vlad.rozetkapiclist.ui.common.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.toolbar.*
 
 @AndroidEntryPoint
 class ImageListFragment : BaseFragment() {
@@ -22,4 +23,8 @@ class ImageListFragment : BaseFragment() {
         return inflater.inflate(R.layout.fragment_image_list, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupToolbar(toolbar, getString(R.string.gallery))
+    }
 }
