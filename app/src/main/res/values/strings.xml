@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RozetkaPicList</string>
+    <string name="error_title">Error</string>
 </resources>
