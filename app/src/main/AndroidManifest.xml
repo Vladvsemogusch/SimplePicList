@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cc.anisimov.vlad.rozetkapiclist">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name=".ui.common.BaseApp"
         android:allowBackup="true"
