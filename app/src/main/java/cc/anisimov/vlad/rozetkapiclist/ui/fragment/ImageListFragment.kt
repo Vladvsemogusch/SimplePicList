@@ -9,6 +9,7 @@ import cc.anisimov.vlad.rozetkapiclist.R
 import cc.anisimov.vlad.rozetkapiclist.domain.viewmodel.ImageListViewModel
 import cc.anisimov.vlad.rozetkapiclist.ui.common.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.loading_overlay.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 @AndroidEntryPoint
@@ -28,6 +29,7 @@ class ImageListFragment : BaseFragment() {
         setupToolbar(toolbar, getString(R.string.gallery))
         viewModel.start()
         setupErrorHandling(viewModel.oError)
+        setupLoading(viewModel.oLoading, loadingOverlay)
     }
 
 
