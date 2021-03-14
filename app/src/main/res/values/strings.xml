@@ -2,4 +2,6 @@
     <string name="app_name">RozetkaPicList</string>
     <string name="error_title">Error</string>
     <string name="gallery">Gallery</string>
+    <string name="photo_thumbnail">Photo thumbnail</string>
+    <string name="unknown_error">Something went wrong</string>
 </resources>
